@@ -4,7 +4,7 @@
 set Target=127.0.0.1 
 
 :loop
-ping %Target% -l 65500 -n 1000 -t | findstr /C:"Reply from" > nul
+ping %Target% -l 65500 -n 1000 -t | findstr /C:"Reply from" /C:"Resposta de" > nul
 if %errorlevel%==0 (
     start cmd /c "ping %Target% -l 65500 -n 1000 -t"
     goto loop
